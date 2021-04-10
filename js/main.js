@@ -16,8 +16,13 @@
         `Favourite Movies & TV Shows`, `The Gladiator, The Umbrella Acadamy`]
       ];
 
-    teamBio.textContent = teamBios[event.target.dataset.offset];
+    teamBio.textContent = teamBios[event.target.dataset.offset][0];
 
+    teamBio.querySelector(h2).textContent = teamBios[event.target.dataset.offset][1];
+
+    function bios(){
+
+    };
 
     sasha.addEventListener('click', sashaBio);
     georgey.addEventListener('click', bios);
