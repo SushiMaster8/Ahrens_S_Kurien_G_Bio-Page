@@ -14,7 +14,6 @@
 
 
 
-  // adding house info using arrays -> this is what you would do for FIP as well
   const memberInfo = [
 
     ['Developer', 'Georgey Kurien', `Hey, my name is Georgey Kurien. I study at Fanshawe in the Interactive Media Design Course. I am currently in level 2 of the course. My hobbies are Reading Fiction and Fantasy, Drawing Machines, Watching documentaries, Teaching math, currently learing piano. My favourite sport is swimming. My favourite books are the Tintin comics and The Tapestry series. My favourite music genres are Pop, Classic, Rock. My favourite music artists are Ren, Marc Rebillet, White Stripes. Finally, my favourite movie and tv show are The gladiator and The umbrella Academy.`], // houseInfo[0][0] -> gets the first index of the subarray (the house name)
