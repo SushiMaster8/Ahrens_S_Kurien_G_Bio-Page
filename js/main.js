@@ -1,30 +1,41 @@
 (() => {
+  console.log('fired');
 
-    const sasha = document.querySelector('.sasha'),
-          georgey = document.querySelector('.georgey'),
-          teamBio = document.querySelector('#team-bios');
+  // variables at the top
 
-    const teamBios = [
-      ['Sasha Ahrens', `'Sasha is 18 years old and lives in London Ontario. He attends school at Fanshawe College and is
-      enrolled in a 2-year Interactive Media Design program.'`, `Hobbies`, `Playing Hockey, Reading, Drawing, Media Design, Spending time with freinds and family, Listening to Music, and playing Video Games.`,
-      `Favourite Hockey Team and Player`, `Toronto Maple Leafs and Alex Ovechkin`, `Favourite Books`, `Harry Potter series, Percy Jackson series, The Walking Dead series, The Shining`,
-      `Favourite Music Genres`, `Rap, Pop, Rock & Roll, R&B, Trap`, `Favourite Music Genres`, `Tee Grizzley, Kanye West, Drake, Kendrick Lamar, Travis Scott, Denzel Curry`,
-      `Favourite Movies & TV Shows`, `The Social Network, The Dark Knight, SuperBad, Breaking Bad, Stranger Things, The MCU.`],
-      ['Georgey Kurien', `Hey, my name is Georgey Kurien. I study at Fanshawe in the Interactive Media Design Course. I am currently in level 2 of the course.`,
-        `Hobbies`, `Reading Fiction and Fantasy, Drawing Machines, Watching Documentaries, Teaching Math, Currently learning piano`, `Favourite Sport`, `Swimming`,
-        `Favourite Books`, `Tintin, Idiot's Guide to html`, `Favourite Music Genres`, `Pop, Classic, Rock`, `Favourite Artists`, `Ren, Marc Rebillet, White Stripes`,
-        `Favourite Movies & TV Shows`, `The Gladiator, The Umbrella Acadamy`]
-      ];
+  const pics = document.querySelector('#navList'),
+        banner = document.querySelector('.headShots'),
+        role = document.querySelector('h1'),
+        name = document.querySelector('h2'),
+        memberInfo = document.querySelector('.description');
 
-    teamBio.textContent = teamBios[event.target.dataset.offset][0];
 
-    teamBio.querySelector(h2).textContent = teamBios[event.target.dataset.offset][1];
 
-    function bios(){
 
-    };
 
-    sasha.addEventListener('click', sashaBio);
-    georgey.addEventListener('click', bios);
 
-  }) ();
+  const memberInfo = [
+
+    ['Developer', 'Georgey Kurien', `Hey, my name is Georgey Kurien. I study at Fanshawe in the Interactive Media Design Course. I am currently in level 2 of the course. My hobbies are Reading Fiction and Fantasy, Drawing Machines, Watching documentaries, Teaching math, currently learing piano. My favourite sport is swimming. My favourite books are the Tintin comics and The Tapestry series. My favourite music genres are Pop, Classic, Rock. My favourite music artists are Ren, Marc Rebillet, White Stripes. Finally, my favourite movie and tv show are The gladiator and The umbrella Academy.`], // houseInfo[0][0] -> gets the first index of the subarray (the house name)
+
+    ['Designer', 'Sasha Ahrens', `I am sasha, I am 18 years old and live in London Ontario. I attend Fanshawe College and am currently enrolled in a 2 year Interactive Media Design program. My hobbies include Playing Hockey, Reading, Drawing, Media Design, Spending time with freinds and family, Listening to Music, and playing Video Games. My favourite Hockey Team and Player are Toronto Maple Leafs and Alex Ovechkin. My favourite books are  The Harry Potter series, Percy Jackson series, The Walking Dead series, and The Shining. My favourite genres of music are Rap, Pop, Rock and Roll, R&B, Trap. My favourite musical artists are Tee Grizzley, Kanye West, Drake, Kendrick Lamar, Travis Scott, Denzel Curry. My Favourite Movies & TV Shows are The Social Network, The Dark Knight, SuperBad, Breaking Bad, Stranger Things, and movies from the MCU.`]
+
+    ];
+
+function start(event) {
+   setMemberData(memberInfo[event.target.dataset.offset][0], memberInfo[event.target.dataset.offset][1]);
+  }
+
+function setMemberData(role, name, desc) {
+    role.textContent = role;
+    name.textContent = name;
+    memberInfo.textContent = desc;
+  }
+
+ 
+  
+pics.addEventListener('click', start);
+
+
+
+})();
